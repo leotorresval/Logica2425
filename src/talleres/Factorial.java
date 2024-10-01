@@ -14,7 +14,7 @@ public class Factorial {
         }else{
             int i=1;
             while(i<=num){
-                acu*=i;
+                acu=acu*i;
                 i++;
             }
             System.out.println("Factorial: "+acu);
