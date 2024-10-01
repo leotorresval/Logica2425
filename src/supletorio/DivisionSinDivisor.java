@@ -13,7 +13,7 @@ public class DivisionSinDivisor {
         System.out.println("Divisor");
         divisor = teclado.nextInt();
         if (dividendo < divisor) {
-            System.out.println("Solo se dividir enteros :'v ");
+            System.out.println("Solo se dividir n :'v ");
         } else {
             for (int i = 0; i < 10000; i++) {
                 dividendo = dividendo - divisor;
