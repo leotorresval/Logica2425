@@ -16,5 +16,11 @@ public class Pruebas {
 
         Persona maria = new Persona("1803", "Maria", "Mendez");
         System.out.println("Hola " + maria.getNombre());
+        Persona persona = new Persona("18010", "Andres");
+        persona.setNombre("Jose");
+        leo.Saludo();
+        juan.Saludo();
+        persona.Saludo();
+        maria.CantLetras();
     }
 }

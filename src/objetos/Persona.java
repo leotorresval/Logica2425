@@ -10,9 +10,6 @@ public class Persona {
     private boolean donante;
 
     //CONSTRUCTOR PREDETERMINADO
-    private Persona() {
-    }
-
     //CONSTRUCTOR PARAMETRIZADO
     public Persona(String cedula, String nombre, String apellido, int edad,
             double estatura, boolean donante) {
@@ -80,4 +77,15 @@ public class Persona {
         this.donante = donante;
     }
 
+    public void Saludo() {
+        System.out.println("Mi nombre es: " + nombre);
+        System.out.println("Mi cedula es: " + cedula);
+    }
+
+    public void CantLetras() {
+        System.out.println("Mi nombre es: " + nombre);
+        System.out.println("Mi nombre tiene "+nombre.length()
+        +" letras");
+
+    }
 }
