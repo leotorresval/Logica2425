@@ -18,9 +18,15 @@ public class Pruebas {
         System.out.println("Hola " + maria.getNombre());
         Persona persona = new Persona("18010", "Andres");
         persona.setNombre("Jose");
+        Persona mikel = new Persona("0104", "Mikel");
+        Persona santiago = new Persona("1701", "Santiago");
+        
         leo.Saludo();
         juan.Saludo();
         persona.Saludo();
         maria.CantLetras();
+        maria.obtenerProvincia();
+        mikel.obtenerProvincia();
+        santiago.obtenerProvincia();
     }
 }

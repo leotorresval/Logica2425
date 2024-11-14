@@ -86,6 +86,18 @@ public class Persona {
         System.out.println("Mi nombre es: " + nombre);
         System.out.println("Mi nombre tiene "+nombre.length()
         +" letras");
-
+    }
+    
+    public String obtenerProvincia(){
+        String p= "";
+        int codigo= Integer.parseInt(cedula.substring(0, 2));
+        switch(codigo){
+            case 01: p="Azuay";break;
+            case 17: p="Pichinchia";break;
+            case 18: p="Tungurahua";break;
+            default: p="Cedula incorrecta";
+        }
+        System.out.println(p);
+        return p;
     }
 }
