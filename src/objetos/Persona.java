@@ -93,7 +93,7 @@ public class Persona {
         int codigo= Integer.parseInt(cedula.substring(0, 2));
         switch(codigo){
             case 01: p="Azuay";break;
-            case 17: p="Pichinchia";break;
+            case 17: p="Pichincha";break;
             case 18: p="Tungurahua";break;
             default: p="Cedula incorrecta";
         }

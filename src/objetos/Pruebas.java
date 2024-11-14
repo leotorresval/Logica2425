@@ -28,5 +28,9 @@ public class Pruebas {
         maria.obtenerProvincia();
         mikel.obtenerProvincia();
         santiago.obtenerProvincia();
+        
+        Cliente jorge = new Cliente("1701","Jorge");
+        jorge.Saludo();
+        jorge.obtenerProvincia();
     }
 }
