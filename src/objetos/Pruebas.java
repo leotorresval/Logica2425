@@ -19,7 +19,7 @@ public class Pruebas {
         Persona persona = new Persona("18010", "Andres");
         persona.setNombre("Jose");
         Persona mikel = new Persona("0104", "Mikel");
-        Persona santiago = new Persona("1701", "Santiago");
+        Persona santiago = new Persona("0901", "Santiago");
         
         leo.Saludo();
         juan.Saludo();
