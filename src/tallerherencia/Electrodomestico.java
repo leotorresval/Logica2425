@@ -29,7 +29,7 @@ public class Electrodomestico {
         this.estado = estado;
     }
     
-    public void imprimir(){
+    public void impresion(){
         System.out.println("Consumo electrico: "+getConsumoElec());
         System.out.println("Estado: "+isEstado());
     }

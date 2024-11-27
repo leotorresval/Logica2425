@@ -1,13 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package tallerherencia;
 
-/**
- *
- * @author User
- */
-public class Refrigerador {
+public class Refrigerador extends Electrodomestico {
+    private double temperatura;
+    
+    public Refrigerador(double consumoElec, boolean estado,
+            double temperatura){
+        super(consumoElec, estado);
+        this.temperatura=temperatura;
+    }
+    
+    public void imprimir(){
+        
+    }
     
 }
