@@ -6,7 +6,7 @@ public class ControlDatos {
 
     public static void main(String[] args) {
         int valor = lecturaEnteros("Ingrese una edad");
-        System.out.println("La edad ingresada es " +valor);
+        System.out.println("La edad ingresada es " + valor);
     }
 
     public static int lecturaEnteros() {
@@ -24,17 +24,36 @@ public class ControlDatos {
         } while (correcto == true);
         return valor;
     }
-    
-    
+
     public static int lecturaEnteros(String texto) {
         boolean correcto = true;
         int valor = 0;
         do {
             Scanner teclado = new Scanner(System.in);
             try {
-                System.out.print(texto+": ");
+                System.out.print(texto + ": ");
                 valor = teclado.nextInt();
                 correcto = false;
+            } catch (Exception e) {
+                System.out.println("Ingrese solo enteros");
+            }
+        } while (correcto == true);
+        return valor;
+    }
+
+    public static int lecturaCasillas(String texto) {
+        boolean correcto = true;
+        int valor = 0;
+        do {
+            Scanner teclado = new Scanner(System.in);
+            try {
+                System.out.print(texto + ": ");
+                valor = teclado.nextInt();
+                if (valor >= 1 && valor <= 9) {
+                    correcto = false;
+                }else{
+                    System.out.println("Ingrese en el rango indicado");
+                }
             } catch (Exception e) {
                 System.out.println("Ingrese solo enteros");
             }

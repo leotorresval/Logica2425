@@ -9,7 +9,10 @@ public class Vectores {
     public static void main(String[] args) {
         //definicionVector();
         //vectorEdades();
-        vectorNombre();
+        //vectorNombre();
+        int l[]={70,13,5,7,23,5,7,9};
+        repaso(l);
+        repetidos();
     }
 
     public static void definicionVector() {
@@ -47,7 +50,7 @@ public class Vectores {
         Scanner teclado = new Scanner(System.in);
         int edades[] = new int[12];
         double promedio = 0;
-        //ASINGACION
+        //ASIGNACION
         for (int i = 0; i < edades.length; i++) {
             System.out.print("[" + (i + 1) + "/" + edades.length + "] Ingrese la edad: ");
             edades[i] = teclado.nextInt();
@@ -84,7 +87,7 @@ public class Vectores {
             System.out.print("Ingrese un nombre: ");
             lista[i] = teclado.next().toUpperCase();
         }
-        //IMPRIMIR LA CANTIDA DE LETRAS
+        //IMPRIMIR LA CANTIDAD DE LETRAS
         for (int i = 0; i < lista.length; i++) {
             String nombre = lista[i];
             int cantidad = nombre.length();
@@ -121,7 +124,7 @@ public class Vectores {
 
         System.out.println("El primer nombre alfabeticamente es: " + primero);
         System.out.println("El ultimo nombre alfabeticamente es: " + ultimo);
-        
+
         //ORDENAR EL VECTOR ALFABETICAMENTE
         ordenarVector(lista);
     }
@@ -131,17 +134,15 @@ public class Vectores {
         for (int i = 0; i < cadenas.length; i++) {
             String primera = cadenas[i];
             char letraPalabra = primera.charAt(0);
-            for (int j =i+1; j < cadenas.length; j++) {
+            for (int j = i + 1; j < cadenas.length; j++) {
                 char letraVector = cadenas[j].charAt(0);
                 if (letraVector < letraPalabra) {
-                    cadenas[i]=cadenas[j];
-                    cadenas[j]=primera;
-                    primera=cadenas[i];
-                    letraPalabra=cadenas[i].charAt(0);
+                    cadenas[i] = cadenas[j];
+                    cadenas[j] = primera;
+                    primera = cadenas[i];
+                    letraPalabra = cadenas[i].charAt(0);
                 }
 
-                
-                
             }
         }
         System.out.println("--------------------------");
@@ -166,5 +167,49 @@ public class Vectores {
             lista[i] = new Persona(cedula, nombre);
         }
     }
+
+    //int l[]={1,3,5,7,23,5,7,9};
+    public static void repaso(int[] lista) {
+        imprimir(lista);
+        for (int i = 0; i < lista.length - 1; i++) {
+            for (int j = i + 1; j < lista.length ; j++) {
+                if (lista[i] > lista[j]) {
+                    int a = lista[i];
+                    lista[i] = lista[j];
+                    lista[j] = a;
+                }
+            }
+        }
+        System.out.println("");
+        imprimir(lista);
+    }
+    
+    public static void imprimir(int [] vector){
+        for (int i = 0; i < vector.length; i++) {
+            System.out.println("["+i+"]: "+vector[i]);
+        }
+    }
+            
+            
+    public static void repetidos(){
+        int cUnicos=0;
+        int c=0;
+        int [] v ={1,2,3,11,2,5};
+        for (int i = 0; i < v.length; i++) {
+            for (int j = i+1; j < v.length; j++) {
+                if(v[i]==v[j]){
+                    cUnicos++;
+                }
+            }
+            if(cUnicos>0){
+                c++;
+            }
+            cUnicos=0;
+        }
+        c=v.length-(v.length-c);
+        System.out.println("Valores unicos "+(c));
+    }       
+            
+    
 
 }
