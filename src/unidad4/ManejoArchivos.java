@@ -7,7 +7,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ManejoArchivos {
-
     public static void main(String[] args) {
         try {
             String ruta = "C:\\modificado.csv";
