@@ -14,10 +14,14 @@ public class Archivo2 {
             Scanner leer= new Scanner(a);
             ArrayList<String> lista = new ArrayList<>();
             int c=0;
+            //MUEVE EL PUNTERO A LA SIGUIENTE POSICION
+            //EVITANDO LA CABECERA
+            leer.nextLine();
             while (leer.hasNextLine()) {                
                 String cadena = leer.nextLine();
                 String v[] = cadena.split(",");
-                System.out.println(cadena);
+                //System.out.println(cadena);
+                c+=Integer.parseInt(v[4]);
                 boolean b = Boolean.parseBoolean(v[12]);
                 if(b==true){
                     lista.add(cadena);
